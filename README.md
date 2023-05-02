@@ -12,7 +12,8 @@ Pytorch 1.12.1
 Pandas 1.4.3
 
 ```python
-python train.py --model
+example
+python train.py --batch-size 16 --epochs 200 --learning-rate 1e-4
 ```
 
 ## Reference
