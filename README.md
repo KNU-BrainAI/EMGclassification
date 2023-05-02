@@ -17,7 +17,7 @@ python train.py --batch-size 16 --epochs 200 --learning-rate 1e-4
 ```
 
 ## Reference
-[EMGHandNet: A hybrid CNN and Bi-LSTM architecture for hand activity classification using surface EMG signals]
-https://www.sciencedirect.com/science/article/pii/S0208521622000080
-[NinaPro datasets]
+[EMGHandNet: A hybrid CNN and Bi-LSTM architecture for hand activity classification using surface EMG signals]   
+https://www.sciencedirect.com/science/article/pii/S0208521622000080   
+[NinaPro datasets]   
 http://ninaweb.hevs.ch/
