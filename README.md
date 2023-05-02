@@ -1,6 +1,6 @@
 # EMGhandnet
 
-Before starting our project, We tested previous study's model.   
+Before starting our project, we tested previous study's model.   
 This is just for testing previous study's model and dataset, this code may not perfectly work.   
 And it can be different from original paper because we couldn't find original source code and that made with tensorflow, so we just made model's architecture with pytorch and limitted information of model.   
 But without some information and preprocessing, it performed almost same as original one's performance at NinaPro db1 dataset.   
