@@ -42,14 +42,13 @@ parser.add_argument('--learning-rate', type=float,  help='an float number of lea
 parser.add_argument('--batch-size', type=int,  help='integer for size of mini batch', default = 16)
 parser.add_argument('--method', type=str, choices=["default", "adv","encoder","SNN","DF"],default="default", help="training method")
 parser.add_argument('--dataset', type=int, default=1, help="Ninaprodb dataset type")
-parser.add_argument('--train-dir', type=str,  help='dir of train_data', default = './ninaprodb1train.pkl')
-parser.add_argument('--test-dir', type=str,  help='dir of test_data', default = './ninaprodb1test.pkl')
+parser.add_argument('--train-dir', type=str,  help='dir of train_data', default = './pp_db2train.pkl')
+parser.add_argument('--test-dir', type=str,  help='dir of test_data', default = './pp_db2test.pkl')
 
 args = parser.parse_args()
 
 
-with open('./classes.json', 'r') as f:
-    classes = json.load(f)
+
 #%% pickle 불러오기
 
 
@@ -59,12 +58,9 @@ with open('./classes.json', 'r') as f:
 #%% Main
 def main(args: argparse.Namespace):
     "set up"
-    Dataset = {1:emgdataset.Nina1Dataset,2:emgdataset.Nina2Dataset,3:emgdataset.Autodataset,4:emgdataset.Nina4Dataset,
-               5:emgdataset.BERTDataset, 6:emgdataset.SNNNina1Dataset, 7:emgdataset.New, 8:emgdataset.Nina4}[args.dataset]
-    train_step = {"default": methods.train_step,"adv": methods.adversarial_train_step,
-                  "encoder":methods.encoder_train_step,"SNN": methods.SNN_train_step,"DF": methods.DFtrain_step}[args.method]
-    model = ({"EMGhandnet": models.EMGhandnet,"SNN":models.SNN,
-              "CNN":models.NormalCNN, "DF":models.DF, "TF":models.TFModel, "TF2":models.TFModel2}[args.model_name]()).to(device) 
+    Dataset = {1:emgdataset.Nina1Dataset}[args.dataset]
+    train_step = {"default": methods.train_step}[args.method]
+    model = ({"EMGhandnet": models.EMGhandnet}[args.model_name]()).to(device) 
     learning_rate = args.learning_rate
     epochs = args.epochs
     batch_size = args.batch_size
