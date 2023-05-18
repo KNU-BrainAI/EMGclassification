@@ -14,7 +14,7 @@ class EMGhandnet(nn.Module):
         self.fcc = nn.Linear(64,128)
         self.fcc2 =nn.Linear(128,64)
         self.fc2 = nn.Linear(512,52)
-    def forward(self,x,x2):
+    def forward(self,x):
         #input (batch, 25,10, 20)
         temp = [ self.cnn(x[:,t,:,:]) for t in range(x.size(1))]
         """
@@ -22,8 +22,6 @@ class EMGhandnet(nn.Module):
             temp.append(self.cnn(x[:,t,:,:]))
         """
         x = torch.stack(temp,1)
-        temp = [ self.cnn(x2[:,t,:,:]) for t in range(x2.size(1))]
-        x2 = torch.stack(temp,1)
         # (batch,time, features) = (batch, 25, 64)
         
         x = self.lstm(x)
