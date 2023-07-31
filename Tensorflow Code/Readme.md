@@ -6,7 +6,7 @@ And it can be different from original paper because we couldn't find original so
 
 We attempted to create the model developed in TensorFlow mentioned in the referenced article. 
 The model we created achieved a higher accuracy of 93.5% for Ninaprodb1, by incorporating additional preprocessing techniques specific to the datasets mentioned in the article. 
-As for Ninaprodb4, an accuracy of around 80% was achieved.  This accuracy is slightly lower than the value mentioned in the article.
+As for Ninaprodb4, an accuracy of around 81.3% was achieved.  This accuracy is slightly lower than the value mentioned in the article.
 
 For the Ninaprodb1 dataset, separate notebooks were created for each individual process, and finally, a notebook containing all the processes can be found on this GitHub page. 
 For instance, there are notebooks for the model without any preprocessing, the model with only standardization added, and the model with both standardization and wavelet denoising applied. 
