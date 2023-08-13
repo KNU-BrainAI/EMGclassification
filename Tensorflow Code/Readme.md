@@ -8,7 +8,7 @@
   
 - I tried using a batch size of 32 in Naveen's code, just like in my models. With the same model, an accuracy value of 91.9% was achieved for NinaproDB1, and an accuracy value of 87.87% was achieved for NinaproDB4 with a learning rate of 1e-3. You can see the results in NinaproDB1withSameArchitectureNinaproDB4andBatchSize32AsInNaveen.ipynb and NinaproDB4withBatchSize32AsInNaveen.ipynb.
   
-- The same model with Naveen Github Code is included in NinaproDB4_SameModelwithNaveenGithub.ipynb and NinaproDB1_SameModelwithNaveenGithub.ipynb notebooks. I got the accuracies for NinaproDB1_85.5 and NinaproDB4_67.8.
+- The same model with Naveen Github Code is included in NinaproDB4_SameModelwithNaveenGithub.ipynb and NinaproDB1_SameModelwithNaveenGithub.ipynb notebooks. I got the accuracies for NinaproDB1_85.5% and NinaproDB4_67.8%.
 
 - My model is better than the Naveen code, according to my pre-processing techniques.
 
